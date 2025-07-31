@@ -26,3 +26,26 @@ h1{
         transform: rotate(50%, -50%);
     }
 }
+
+.Side_run{
+    position: relative;
+    top: 54vh;
+    animation: Side_run_animate 10s linear infinite alternate;
+}
+
+.run1{
+    left: 50vw;
+}
+
+@keyframes Side_run_animate {
+    0% {
+        transform: translateX(-10vw);
+    }
+    100% {
+        transform: translateX(+10vw);
+    }
+}
+
+.flying_monster_skull{
+    
+}
