@@ -29,12 +29,12 @@ h1{
 
 .Side_run{
     position: relative;
-    top: 54vh;
+    top: 59vh;
     animation: Side_run_animate 10s linear infinite alternate;
 }
 
 .run1{
-    left: 50vw;
+    left: 46vw;
 }
 
 @keyframes Side_run_animate {
@@ -46,6 +46,52 @@ h1{
     }
 }
 
-.flying_monster_skull{
-    
+.flying_monster_skull {
+    position: absolute;
+    top: 14vh;
+    left: 50vw;
+    width: 15vw; /* Adjust size as needed */
+    height: auto;
+    transform-origin: center center;
+    animation: infinity_flight 10s linear infinite, tilt_direction 2s ease-in-out infinite alternate;
+}
+
+@keyframes infinity_flight {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    12.5% {
+        transform: translate(-50px, -30px) rotate(-10deg);
+    }
+    25% {
+        transform: translate(-100px, 0px) rotate(-20deg);
+    }
+    37.5% {
+        transform: translate(-50px, 30px) rotate(-10deg);
+    }
+    50% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    62.5% {
+        transform: translate(50px, -30px) rotate(10deg);
+    }
+    75% {
+        transform: translate(100px, 0px) rotate(20deg);
+    }
+    87.5% {
+        transform: translate(50px, 30px) rotate(10deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+/* Tilting effect to the flying direction */
+@keyframes tilt_direction {
+    0% {
+        rotate: -5deg;
+    }
+    100% {
+        rotate: 5deg;
+    }
 }
